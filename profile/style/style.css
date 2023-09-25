@@ -1,0 +1,463 @@
+/* margin corresponde ao espaçamento externo da caixa em que o elemento está até 
+os cantos da página
+padding corresponde á "margem" interna em relação ao elemento
+backgroundcorresponde ao fundo, no qual é possível colocar uma cor sólida única
+ou em gradiente
+
+box-sizing: content-box não é uma boa prática, pois
+ao aumentamos uma imagem, por exemplo, ou qaulquer outro
+elemento, o que ocorre é que a CAIXA DE CONTEÚDO  (em que 
+o elemento está) aumenta e não ele em si, causando possíveis 
+distorções. O ideal é utilizar box-sizing: border-box
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*background: rgb(0,176,255);*/
+    /*background: linear-gradient(90deg, rgba(0,176,255,1) 43%, rgb(168, 214, 214) 63%);*/
+
+}
+
+
+/*#menu {
+    display: flex;        /*Selecionar o layout flexbox 
+    list-style: none;     Tirar as bolinhas de cada item da lista 
+    padding: 10px;
+    justify-content: center;
+    padding-bottom: 30px;
+    
+} */
+
+
+#menu a {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    /*Aplicar uma cor á fonte */
+    font-size: 18px;
+    /* Aplicar uma fonte */
+    color: rgb(255, 255, 255);
+    /* Aumentar o tamanho da fonte */
+    text-decoration: none;
+    /* Tirar o sublinhado do link */
+    flex-direction: row;
+    /* Alinhar um ao lado do outro */
+    margin: 18px;
+    text-transform: uppercase;
+}
+
+/* Ao passar o mouse */
+#menu a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+header {
+    padding-bottom: 25px;
+    background: linear-gradient(90deg, rgb(79, 81, 180) 34%, rgba(24, 157, 164, 1) 60%);
+    color: black;
+}
+
+header h2 {
+    color: black;
+}
+
+body {
+    /*background: linear-gradient(90deg, rgb(255, 255, 255) 21%, rgb(255, 255, 255) 63%);*/
+    background: black;
+    color: aliceblue;
+
+
+}
+
+
+    .apresentacao {
+    display: flex;
+    }   /* height: 200px; */
+
+
+
+h1 {
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    line-height: 170%;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+
+.right {
+    flex: 5;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.left {
+    text-align: center;
+    flex: 5;
+}
+
+.btn {
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 6px;
+    border-radius: 5px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.btnContact {
+    margin-top: 20px;
+    background: rgb(0, 1, 5);
+    color: rgb(255, 254, 254);
+}
+
+.btnContact:hover {
+    background: rgb(0, 0, 0);
+    color: rgba(185, 170, 170, 0.788);
+}
+
+.containerServicos {
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.itemServico1,
+.itemServico3,
+.itemServico6,
+.itemServico8 {
+    border: 2px solid rgb(0, 77, 179);
+    border-radius: 5px;
+    margin: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 20%;
+
+}
+
+.itemServico2,
+.itemServico4,
+.itemServico5,
+.itemServico7 {
+    border: 2px solid rgb(13, 46, 153);
+    border-radius: 5px;
+    margin: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 20%;
+
+
+}
+
+.containerServicos h2 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 17px;
+    color: rgb(23, 178, 189)
+}
+
+.containerServicos img {
+    width: 60px;
+}
+
+.itemServico1:hover,
+.itemServico3:hover,
+.itemServico5:hover,
+.itemServico7:hover {
+    border: 1px solid rgb(0, 77, 179);
+    background: rgba(0, 78, 179, 0.61);
+    cursor: pointer;
+}
+
+.itemServico2:hover,
+.itemServico4:hover,
+.itemServico6:hover,
+.itemServico8:hover {
+    border: 1px solid rgb(0, 77, 179);
+    background: rgba(0, 78, 179, 0.507);
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    background: rgb(0, 0, 0);
+    padding-top: 30px;
+    font-size: 20px;
+    color: rgb(4, 189, 235);
+    text-transform: uppercase;
+
+
+}
+
+.containerSobreMim {
+    display: flex;
+    background: black;
+    align-items: center;
+
+
+}
+
+.containerSobreMim .left {
+    background: rgb(0, 0, 0);
+    flex: 7;
+    margin-right: 190px;
+    margin-left: 120px;
+    color: rgb(248, 248, 248);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    text-align: left;
+    line-height: 30px;
+
+}
+
+.containerSobreMim .right {
+    background: rgb(0, 0, 0);
+    flex: 3;
+    color: aliceblue;
+    font-family: 'Noto Sans Nabataean', sans-serif;
+
+}
+
+
+.containerSobreMim video {
+    border-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 5px solid rgb(53, 5, 226);
+
+
+
+}
+
+#sobremim h3 {
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.socialMedia {
+    display: flex;
+
+
+}
+
+.socialMedia img {
+    width: 30px;
+}
+
+.containerSobreMim h2 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 28px;
+    color: rgb(4, 189, 235);
+    margin-bottom: 19px;
+
+}
+
+.socialMedia p {
+    margin-left: 5px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 15px;
+    color: aliceblue;
+
+}
+
+.socialMedia p:hover {
+    color: rgb(70, 12, 104);
+}
+
+.socialMedia a {
+    text-decoration: none;
+}
+
+#contato {
+    background: rgb(0, 0, 0);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.containerContato h2 {
+    font-size: 22px;
+}
+
+form {
+    font-size: 16px;
+    max-width: 500px;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 200px;
+    padding: 10px;
+    color: rgb(46, 25, 119);
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+
+
+
+}
+
+.displayContato {
+    display: flex;
+
+}
+
+form h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+.mensagem {
+    margin-left: 60px;
+}
+
+textarea {
+    resize: none;
+    width: 400px;
+    height: 123px;
+
+
+}
+
+.mensagem input {
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    background: rgba(0, 198, 247, 0.568);
+    color: white;
+    cursor: pointer;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    border: 2px solid rgb(53, 5, 226);
+}
+
+.mensagem input:hover {
+    background: rgb(0, 248, 248);
+}
+
+.mapa {
+    margin-left: 90px;
+}
+
+.navColor {
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(79, 81, 180) 34%, rgba(24, 157, 164, 1) 60%);
+
+
+}
+
+.container-fluid {
+    background: linear-gradient(90deg, rgb(79, 81, 180) 34%, rgba(24, 157, 164, 1) 60%);
+    margin-top: -8px;
+    margin-bottom: -8px;
+
+}
+
+.navbar-toggler {
+    border: 1px solid transparent;
+    margin: 7px;
+}
+
+.navbar {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb%28255, 255, 255' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+footer h6 {
+    color: rgb(5, 178, 190);
+}
+
+footer p {
+    color: white;
+}
+
+.copy {
+    color: white;
+}
+
+.mais {
+    font-family:'Atkinson Hyperlegible', sans-serif; 
+    font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .apresentacao{
+        flex-direction: column;
+        background: rgb(0, 77, 179);
+    }
+
+    .left img {
+        margin-bottom: 14px;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    .containerSobreMim {
+        flex-direction: column;
+    }
+
+    .containerSobreMim .left {
+        width: 75%;
+        margin-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+    .containerSobreMim .right {
+        width: 75%;
+    }
+
+    .containerServicos h2 {
+        font-size: 16px;
+         
+    }
+
+    .containerServicos {
+        flex-direction: column;
+    }
+
+    .itemServico1,  .itemServico2, .itemServico3, .itemServico4, .itemServico5, .itemServico6, .itemServico7, .itemServico8 {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #servicos h3 {
+        font-size: 16px;
+    }
+
+    .displayContato {
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 200px;
+    }
+
+    .mapa {
+        margin-left: 0px;
+        margin-right: 50px;
+    }
+}
+
+
+
+
